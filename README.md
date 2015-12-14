@@ -3,8 +3,8 @@ A Magento2 simple custom xml reader demo module.
 
 ## Usage
 ```bash
-composer require cedricblondeau/magento2-module-simple-controller
-php bin/magento module:enable CedricBlondeau_SimpleController
+composer require cedricblondeau/magento2-module-simple-custom-xml-reader
+php bin/magento module:enable CedricBlondeau_SimpleCustomXmlReader
 php bin/magento setup:upgrade
 php bin/magento simplecustomxml:read
 ```
