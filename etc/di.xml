@@ -7,4 +7,11 @@
             <argument name="schemaLocator" xsi:type="object">CedricBlondeau\SimpleCustomXmlReader\Model\SchemaLocator</argument>
         </arguments>
     </type>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="CedricBlondeauSimpleCustomXmlReader" xsi:type="object">CedricBlondeau\SimpleCustomXmlReader\Console\Command\ReadXmlCommand</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
