@@ -14,9 +14,10 @@ class ReadXmlCommand extends Command
 
     /**
      * ReadXmlCommand constructor.
-     * @param \CedricBlondeau\SimpleCustomXmlReader\Model\Reader $reader
+     *
+     * @param \Magento\Framework\Config\Reader\Filesystem $reader
      */
-    public function __construct(\CedricBlondeau\SimpleCustomXmlReader\Model\Reader $reader)
+    public function __construct(\Magento\Framework\Config\Reader\Filesystem $reader)
     {
         $this->reader = $reader;
         parent::__construct();

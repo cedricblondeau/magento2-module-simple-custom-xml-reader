@@ -1,10 +1,15 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="CedricBlondeau\SimpleCustomXmlReader\Model\Reader">
+    <virtualType name="reader" type="Magento\Framework\Config\Reader\Filesystem">
         <arguments>
             <argument name="fileName" xsi:type="string">custom.xml</argument>
             <argument name="converter" xsi:type="object">CedricBlondeau\SimpleCustomXmlReader\Model\Converter</argument>
             <argument name="schemaLocator" xsi:type="object">CedricBlondeau\SimpleCustomXmlReader\Model\SchemaLocator</argument>
+        </arguments>
+    </virtualType>
+    <type name="CedricBlondeau\SimpleCustomXmlReader\Console\Command\ReadXmlCommand">
+        <arguments>
+            <argument name="reader" xsi:type="object">reader</argument>
         </arguments>
     </type>
     <type name="Magento\Framework\Console\CommandList">
